@@ -1,4 +1,4 @@
-# cop4530_knapsack_problem
+# 0-1 Knapsack Problem Solution
 
 To compile run :
 

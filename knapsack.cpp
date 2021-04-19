@@ -13,7 +13,7 @@ int main()
     int numItems = 100;
     int profits[numItems]; 
     int weight[numItems];
-    int maxWeight = 335732;
+    int maxWeight = 335732; // max weight for the knapsack
 
     for(int i=0; i < numItems; i++){
         weight[i] = round((1000 * sqrt(i+1)));
@@ -22,10 +22,12 @@ int main()
 
    int result = knapsack(profits, weight, numItems, maxWeight);
 
-    cout << result << endl;
+    cout << result << endl; //displaying the result
+     
     return 0;
 }
 
+//function to compute the  0-1 knapsack problem
 int knapsack(int profits[], int weight[], int numItems, int maxWeight)
 {
     int x = numItems + 1;
@@ -56,10 +58,12 @@ int knapsack(int profits[], int weight[], int numItems, int maxWeight)
             }
         }
     }
+
+     // return the last position in the table that holds the final value
     return table[numItems][maxWeight];
 }
 
-
+//get max
 int getMax(int left, int right) { 
     
     return (left > right) ? left : right; 
